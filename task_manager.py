@@ -2,6 +2,7 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 TASK_FILE = os.path.join(BASE_DIR, "tasks.txt")
+
 tasks = []
 
 def load_tasks():
@@ -20,6 +21,7 @@ def save_tasks():
         file.write("****TAREAS****:\n")
         file.write("\n".join(tasks))
 
+
 def menu():
     print("\n=== TASK MANAGER ===")
     print("1. Crear tarea")
@@ -30,6 +32,9 @@ def menu():
     print("6. Guardar tareas")
     print("7. Salir")
     
+load_tasks()
+
+
 load_tasks()
 
 while True:
