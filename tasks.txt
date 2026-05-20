@@ -1,5 +1,2 @@
-Tareas:
-lavar los platos
-cocinar
-LAVAR
-LAVAR
+****TAREAS****:
+hola

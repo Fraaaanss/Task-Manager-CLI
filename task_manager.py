@@ -31,6 +31,8 @@ def menu():
     print("5. Buscar tarea")
     print("6. Guardar tareas")
     print("7. Salir")
+    
+load_tasks()
 
 
 load_tasks()
@@ -38,7 +40,6 @@ load_tasks()
 while True:
     menu()
     option = input("Seleccione una opción: ")
-
     if option == "1":
         tarea = input("Ingrese la descripción de la tarea: ")
         tasks.append(tarea)
@@ -46,7 +47,18 @@ while True:
         print("Tarea agregada y guardada en tasks.txt.")
 
     elif option == "2":
-        pass
+        if len(tasks) == 0:
+
+            print("No hay tareas registradas.")
+
+        else:
+
+            print("\n=== LISTA DE TAREAS ===")
+
+            for i, tarea in enumerate(tasks):
+
+                print(f"{i + 1}. {tarea}")
+
 
     elif option == "3":
         pass
