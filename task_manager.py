@@ -102,6 +102,15 @@ while True:
 
 
     # COMPLETAR TAREA
+    if option == "1":
+        tarea = input("Ingrese la descripción de la tarea: ")
+        tasks.append(tarea)
+        save_tasks()
+        print("Tarea agregada y guardada en tasks.txt.")
+    #PAULA
+    elif option == "2":
+        pass
+    #MILENA
     elif option == "3":
 
         if len(tasks) == 0:
@@ -178,6 +187,13 @@ while True:
 
 
     # GUARDAR TAREAS
+    #NAIMA
+    elif option == "4":
+        pass
+    #LUCETY
+    elif option == "5":
+        pass
+    #FRANS
     elif option == "6":
 
         save_tasks()
