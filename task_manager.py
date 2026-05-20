@@ -58,8 +58,7 @@ while True:
         pass
 
     elif option == "6":
-        save_tasks()
-        print("Tareas guardadas en tasks.txt.")
+        pass
 
     elif option == "7":
         print("Saliendo...")
