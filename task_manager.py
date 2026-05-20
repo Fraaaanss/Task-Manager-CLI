@@ -2,7 +2,6 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 TASK_FILE = os.path.join(BASE_DIR, "tasks.txt")
-
 tasks = []
 
 def load_tasks():
@@ -20,8 +19,6 @@ def save_tasks():
     with open(TASK_FILE, "w", encoding="utf-8") as file:
         file.write("****TAREAS****:\n")
         file.write("\n".join(tasks))
-
-
 def menu():
     print("\n=== TASK MANAGER ===")
     print("1. Crear tarea")
@@ -31,12 +28,8 @@ def menu():
     print("5. Buscar tarea")
     print("6. Guardar tareas")
     print("7. Salir")
-    
-load_tasks()
-
-
-load_tasks()
-
+    load_tasks()
+#layla
 while True:
     menu()
     option = input("Seleccione una opción: ")
@@ -45,30 +38,41 @@ while True:
         tasks.append(tarea)
         save_tasks()
         print("Tarea agregada y guardada en tasks.txt.")
-
+    #PAULA
     elif option == "2":
+        pass
+    #MILENA
+    elif option == "3":
+
         if len(tasks) == 0:
 
-            print("No hay tareas registradas.")
+            print("No hay tareas.")
 
         else:
 
-            print("\n=== LISTA DE TAREAS ===")
+            print("\n=== TAREAS ===")
 
             for i, tarea in enumerate(tasks):
 
                 print(f"{i + 1}. {tarea}")
 
+            # Pide número
+            num = int(input("Número de tarea completada: "))
 
-    elif option == "3":
-        pass
+            # Marca como completada
+            tasks[num - 1] = "✔ " + tasks[num - 1]
 
+            # Guarda cambios
+            save_tasks()
+
+            print("Tarea completada.")
+    #NAIMA
     elif option == "4":
         pass
-
+    #LUCETY
     elif option == "5":
         pass
-
+    #FRANS
     elif option == "6":
         pass
 
