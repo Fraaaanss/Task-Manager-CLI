@@ -15,7 +15,9 @@ while True:
     option = input("Seleccione una opción: ")
 
     if option == "1":
-        pass
+        tarea = input("Ingrese la descripción de la tarea: ")
+        tasks.append(tarea)
+        print("Tarea agregada.")
 
     elif option == "2":
         pass
